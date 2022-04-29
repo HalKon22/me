@@ -3,7 +3,7 @@ studentNumber: z1234567
 officialEmail: khomenkohalyna@gmail.com
 contactEmail: # don't write on this line
   firstBit: HalKon22 # this avoids spam, the @ is implied
-  otherBit: gmail.com
+  otherBit: khomenkohalyna@gmail.com
 # accounts
 stackOverflowLink: https://stackoverflow.com/users/1835727/halkon
 github: notionparallax
