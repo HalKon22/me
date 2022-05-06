@@ -42,7 +42,10 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    return None
+    my_list = []
+    for i in range(10):
+     my_list.append("*")
+    return my_list
 
 
 def loops_1c(number_of_items=5, symbol="#"):
@@ -52,7 +55,10 @@ def loops_1c(number_of_items=5, symbol="#"):
     string with exacly one symbol in it.
     E.g.: ['#', '#', '#', '#', '#']
     """
-    return None
+    my_list = []
+    for i in range(5):
+     my_list.append("#")
+    return my_list
 
 
 def loops_2():
@@ -73,7 +79,13 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    return None
+    my_list = []
+    for i in range(10):
+        inside_list = []
+    for j in range (10):
+        inside_list.append("*")
+        my_list.append(inside_list)
+    return my_list
 
 
 def loops_3():
@@ -97,7 +109,13 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    return None
+    my_list = []
+    for i in range(10):
+        inside_list = []
+    for j in range(10):
+        inside_list.append(i)
+        my_list.append(inside_list)
+    return my_list
 
 
 def loops_4():
@@ -117,7 +135,13 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    return None
+    my_list = []
+    for i in range(10):
+        inside_list = []
+    for j in range(10):
+        inside_list.append(j)
+        my_list.append(inside_list)
+    return my_list
 
 
 def loops_5():
@@ -144,7 +168,13 @@ def loops_5():
         "There are {} green bottles".format(8)
     you'll come to see the pros and cons of each over time.
     """
-    return None
+    my_list = []
+    for i in range(10):
+        inside_list = []
+    for j in range(10):
+        inside_list.append(j)
+        my_list.append(inside_list)
+    return my_list
 
 
 def loops_6():

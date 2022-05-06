@@ -1,6 +1,7 @@
 TODO: Reflect on what you learned this week and what is still unclear.
 exit() - exit from the python environment
 (https://design-computing.github.io/md/week2)
+python ..\course\set2\tests.py
 
 def add_5(a_number):
 def adder(a_number, another_number):
@@ -38,3 +39,8 @@ def fix_it(moves=True, should_move=True):   -
     else:   
         print("OMG")
 ######
+
+my_list = []
+    for i in range(10):
+     my_list.append("*")
+    return my_list
