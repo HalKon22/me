@@ -2,6 +2,9 @@
 """Modify each function until the tests pass."""
 
 
+import numbers
+
+
 def is_odd(a_number):
     """Return True if a_number is odd, and False if a_number is even.
 
@@ -56,7 +59,7 @@ def loops_1c(number_of_items=5, symbol="#"):
     E.g.: ['#', '#', '#', '#', '#']
     """
     my_list = []
-    for i in range(5):
+    for j in range(5):
      my_list.append("#")
     return my_list
 
@@ -110,11 +113,7 @@ def loops_3():
          so call str(number) to cast.
     """
     my_list = []
-    for i in range(10):
-        inside_list = []
-    for j in range(10):
-        inside_list.append(i)
-        my_list.append(inside_list)
+     for j in range(10):
     return my_list
 
 
@@ -135,11 +134,11 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    my_list = []
+ my_list = []
     for i in range(10):
         inside_list = []
-    for j in range(10):
-        inside_list.append(j)
+    for j in range (10):
+        inside_list.append("*")
         my_list.append(inside_list)
     return my_list
 
@@ -169,11 +168,11 @@ def loops_5():
     you'll come to see the pros and cons of each over time.
     """
     my_list = []
-    for i in range(10):
+    for i in range (10):
         inside_list = []
-    for j in range(10):
-        inside_list.append(j)
-        my_list.append(inside_list)
+    for j in range (5):
+        inside_list.append ('(i{0}, j{1})'.format(i, j,))
+        my_list.append (inside_list)
     return my_list
 
 
@@ -197,7 +196,13 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    return None
+    my_list = []
+    for i in range(10):
+        inside_list = []
+    for j in range(i+1):
+        inside_list.append(i)
+        my_list.append(inside_list)
+    return my_list
 
 
 def loops_7():
