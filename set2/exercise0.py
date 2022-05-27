@@ -53,7 +53,7 @@ def adder(a_number, another_number):
 
     Same as above, but with any two numbers.
     """
-    the_answer = a_number + a_number
+    the_answer = a_number + another_number
 
     return the_answer
 

@@ -5,6 +5,9 @@ Modify each function until the tests pass.
 """
 
 
+import numbers
+
+
 def loop_ranger(start, stop=None, step=1):
     """Return a list of numbers between start and stop in steps of step.
 
@@ -12,7 +15,12 @@ def loop_ranger(start, stop=None, step=1):
     The look up the docs for range(), you can answer this with just the range 
     function, but we'd like you to do it the long way, probably using a loop.
     """
-    return None
+    my_numbers = []
+    live_number = start
+    while live_number < stop:
+        my_numbers.append(live_number)
+        live_number += step
+    return my_numbers
 
 
 def lone_ranger(start, stop, step):
@@ -40,7 +48,11 @@ def stubborn_asker(low, high):
 
     Look up the docs for input
     """
-    return None
+    while True:
+        the_input = input(f"insert a number between {low} and {high}: ")
+        my_number = int(the_input)
+        if my_number >= low and my_number <=high:
+            return my_number
 
 
 def not_number_rejector(message):
@@ -50,6 +62,8 @@ def not_number_rejector(message):
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
+    the_input = input("tell me your name: ")
+    print (f"I'm can't do that {the_input}")
     return None
 
 
@@ -61,6 +75,8 @@ def super_asker(low, high):
     Try to call at least one of the other functions to minimise the
     amount of code.
     """
+    the_input = input("tell me your name: ")
+    print (f"I'm can't do that {the_input}")
     return None
 
 
