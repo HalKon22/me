@@ -2,6 +2,7 @@
 """Modify each function until the tests pass."""
 
 
+from ast import While
 import numbers
 
 
@@ -47,7 +48,7 @@ def loops_1a():
     """
     my_list = []
     for i in range(10):
-     my_list.append("*")
+        my_list.append("*")
     return my_list
 
 
@@ -60,8 +61,8 @@ def loops_1c(number_of_items=5, symbol="#"):
     """
     my_list = []
     number_of_items = (5)
-    symbol = "#"
-    for j in range(number_of_items):
+    symbol = ("#")
+    for i in range(number_of_items):
         my_list.append(symbol)
     return my_list
 
@@ -114,13 +115,13 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
+
     my_list = []
     for i in range(10):
         inside_list = []
         for j in range(10):
-            inside_list.append(i)
+            inside_list.append(str(i))
         my_list.append(inside_list)
-        
     return my_list
 
 
@@ -144,8 +145,8 @@ def loops_4():
     my_list = []
     for i in range(10):
         inside_list = []
-    for j in range (10):
-        inside_list.append("*")
+        for j in range(10):
+            inside_list.append(str(j))
         my_list.append(inside_list)
     return my_list
 
@@ -175,11 +176,11 @@ def loops_5():
     you'll come to see the pros and cons of each over time.
     """
     my_list = []
-    for i in range (10):
+    for i in range(10):
         inside_list = []
-    for j in range (5):
-        inside_list.append ('(i{0}, j{1})'.format(i, j,))
-        my_list.append (inside_list)
+        for j in range(5):
+            inside_list.append('(i{0}, j{1})'.format(i, j,))
+        my_list.append(inside_list)
     return my_list
 
 
@@ -206,8 +207,8 @@ def loops_6():
     my_list = []
     for i in range(10):
         inside_list = []
-    for j in range(i+1):
-        inside_list.append(i)
+        for j in range(i+1):
+            inside_list.append(str(j))
         my_list.append(inside_list)
     return my_list
 
@@ -233,7 +234,16 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    return None
+    my_list = []
+    for i in range(5):
+        inside_list = []
+        for j in range(i+1):
+            for space in range((i-j)+1):
+                inside_list.append(" ")
+        while  k += (2*j-1):
+            inside_list.append("*")
+        my_list.append(inside_list)
+    return my_list
 
 
 def little_printer(some_kind_of_list, exercise_name):

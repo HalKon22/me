@@ -32,15 +32,15 @@ def fix_it(moves=True, should_move=True):   -
 ######
     if moves == should_move:
         return "No Problem"
-    elif moves and not should_move:
+    elf moves and not should_move:
         return "Duct Tape"
-    elif not moves and should_move:
+    elf not moves and should_move:
          return "WD-40"
     else:   
         print("OMG")
 ######
 
 my_list = []
-    for i in range(10):
+    for I in range(10):
      my_list.append("*")
     return my_list
