@@ -59,8 +59,10 @@ def loops_1c(number_of_items=5, symbol="#"):
     E.g.: ['#', '#', '#', '#', '#']
     """
     my_list = []
-    for j in range(5):
-     my_list.append("#")
+    number_of_items = (5)
+    symbol = "#"
+    for j in range(number_of_items):
+        my_list.append(symbol)
     return my_list
 
 
@@ -113,7 +115,12 @@ def loops_3():
          so call str(number) to cast.
     """
     my_list = []
-     for j in range(10):
+    for i in range(10):
+        inside_list = []
+        for j in range(10):
+            inside_list.append(i)
+        my_list.append(inside_list)
+        
     return my_list
 
 
@@ -134,7 +141,7 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
- my_list = []
+    my_list = []
     for i in range(10):
         inside_list = []
     for j in range (10):
