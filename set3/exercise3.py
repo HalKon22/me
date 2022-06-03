@@ -6,7 +6,7 @@ Steps on the way to making your own guessing game.
 import random
 
 
-def advancedGuessingGame():
+#def advancedGuessingGame():
     """Play a guessing game with a user.
 
     The exercise here is to rewrite the exampleGuessingGame() function
@@ -26,9 +26,33 @@ def advancedGuessingGame():
     purpose if you can!
     """
 
-    return "You got it!"
+    #return "You got it!"
     # the tests are looking for the exact string "You got it!". Don't modify that!
 
 
-if __name__ == "__main__":
-    print(advancedGuessingGame())
+#if __name__ == "__main__":
+    #print(advancedGuessingGame())
+
+def exampleGuessingGame():
+  print("\nWelcome to the guessing game!")
+  print("guess number between 10 and 20")
+  print("OK then, a number between 0 and {} ?".format(upperBound))
+    upperBound = int(upperBound)
+
+    actualNumber = random.randint(0, upperBound)
+
+    guessed = False
+
+    while not guessed:
+        guessedNumber = int(input("Guess a number: "))
+        print("You guessed {},".format(guessedNumber),)
+        if guessedNumber == actualNumber:
+            print("You got it!! It was {}".format(actualNumber))
+            guessed = True
+        elif guessedNumber < actualNumber:
+            print("Too small, try again :'(")
+        else:
+            print("Too big, try again :'(")
+    return "You got it!"
+    if __name__ == "__main__":
+    exampleGuessingGame()

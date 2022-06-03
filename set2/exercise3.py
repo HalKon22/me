@@ -60,8 +60,6 @@ def loops_1c(number_of_items=5, symbol="#"):
     E.g.: ['#', '#', '#', '#', '#']
     """
     my_list = []
-    number_of_items = (5)
-    symbol = ("#")
     for i in range(number_of_items):
         my_list.append(symbol)
     return my_list
@@ -240,7 +238,7 @@ def loops_7():
         for j in range(i+1):
             for space in range((i-j)+1):
                 inside_list.append(" ")
-        while  k += (2*j-1):
+        while i in range (2*j-1):
             inside_list.append("*")
         my_list.append(inside_list)
     return my_list

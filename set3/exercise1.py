@@ -6,6 +6,7 @@ Modify each function until the tests pass.
 
 
 import numbers
+from readline import insert_text
 
 
 def loop_ranger(start, stop=None, step=1):
@@ -20,7 +21,7 @@ def loop_ranger(start, stop=None, step=1):
     while live_number < stop:
         my_numbers.append(live_number)
         live_number += step
-    return my_numbers
+        return my_numbers
 
 
 def lone_ranger(start, stop, step):
@@ -28,7 +29,7 @@ def lone_ranger(start, stop, step):
 
     Look up the docs for range() and wrap it in a 1:1 way
     """
-    return None
+    return range(start, stop, step)
 
 
 def two_step_ranger(start, stop):
@@ -37,7 +38,7 @@ def two_step_ranger(start, stop):
     Sometimes you want to hide complexity.
     Make a range function that always has a step size of 2
     """
-    return None
+    return range(start, stop, 2)
 
 
 def stubborn_asker(low, high):
@@ -62,9 +63,13 @@ def not_number_rejector(message):
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    the_input = input("tell me your name: ")
-    print (f"I'm can't do that {the_input}")
-    return None
+    while True:
+        try:
+            the_input = int(the_input(message))
+            print("thanks {} ". format(the_input))
+            return the_input
+        except:
+            print("that wasn't a number")
 
 
 def super_asker(low, high):
@@ -75,16 +80,23 @@ def super_asker(low, high):
     Try to call at least one of the other functions to minimise the
     amount of code.
     """
-    the_input = input("tell me your name: ")
-    print (f"I'm can't do that {the_input}")
-    return None
+    while True:
+        try:
+            the_input = input(f"insert a number between {low} and {high}: ")
+            my_number = int(the_input)
+            if my_number >= low and my_number <=high:
+                return my_number
+            else:
+                print("number out of the range")
+        except:
+            print("that wasn't a number")
 
 
 if __name__ == "__main__":
     # this section does a quick test on your results and prints them nicely.
     # It's NOT the official tests, they are in tests.py as usual.
     # Add to these tests, give them arguments etc. to make sure that your
-    # code is robust to the situations that you'll see in action.
+    # code is robust to the situations that you'll see in action.25
     # NOTE: because some of these take user input you can't run them from
 
     print("\nloop_ranger", loop_ranger(1, 10, 2))
